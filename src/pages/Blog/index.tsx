@@ -1,17 +1,15 @@
 import { useContextSelector } from 'use-context-selector'
 import { BlogsContext } from '../../contexts/BlogsContext'
 import { SearchForm } from './components/SearchForm'
-import { ArrowSquareOut, Buildings, GithubLogo, Users } from 'phosphor-react'
-import gitImg from '../../assets/avatar.png'
 
 import {
   BlogContainer,
   BlogGrid,
   GridItem,
   GridItemSmall,
-  StyledNavLink,
-  GithubLink, ProfileCard, ProfileContainer, Title, Icons
+  StyledNavLink
 } from './styles'
+import { Profile } from './components/ProfileCard'
 
 export function Blogs() {
   const blogs = useContextSelector(BlogsContext, (context) => {
@@ -26,29 +24,9 @@ export function Blogs() {
 
   return (
     <div>
-      <ProfileContainer>
-        <ProfileCard>
-          <img src={gitImg} alt="" />
-          <Title>
-            <h1>Cameron Williamson</h1>
-            <p>Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.</p>
-            <Icons>
-              <GithubLogo size={20} />
-              <span>cameronwll</span>
-              <Buildings size={20} />Rocketseat
-              <Users size={20} />32 Seguidores
-            </Icons>
-          </Title>
-        </ProfileCard>
-        <GithubLink href="https://example.com" target="_blank" rel="noopener noreferrer">
-          <span>GITHUB{'  '}</span>
-          <ArrowSquareOut size={16} weight="bold" />
-        </GithubLink>
-      </ProfileContainer>
-
+      <Profile />
       <BlogContainer>
         <SearchForm />
-
         <BlogGrid>
           {blogs.map((blog) => {
             return (
