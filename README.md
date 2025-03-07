@@ -56,5 +56,3 @@ npm -v
    ```
 
 ### ⭐ **If you like this project, consider giving it a star on GitHub!** ⭐  
-
-Let me know if you'd like me to tweak anything! 😊🚀
