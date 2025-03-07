@@ -48,7 +48,7 @@ npm -v
    ```
 4. Start the back-end server:  
    ```sh
-  npm run dev:server
+   npm run dev:server
    ```
 5. Open in the browser:  
    ```
